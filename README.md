@@ -1,4 +1,4 @@
-# 🌀 Fibonacci List - State Management Assignment (Flutter)
+# 🌀 Fibonacci List - Mobile Assignment (Flutter)
 
 This Flutter application is a simple demonstration of state management, scrollable UI, and interactive widgets. It was built as part of a coding assignment and showcases a dynamic list of the first 40 Fibonacci numbers.
 
@@ -45,9 +45,11 @@ This Flutter application is a simple demonstration of state management, scrollab
 
 ## 📁 Project Structure
 
+```
 lib/
 ├── main.dart # Main UI and interaction logic
 ├── fibo.dart # Fibonacci logic and data model
+```
 
 ---
 
@@ -60,7 +62,7 @@ flutter run
 
 👤 Author
 • Poramet Poolsup
-• GitHub: your-github-profile
+• GitHub: https://github.com/NinePoramet
 
 📌 Notes
 
