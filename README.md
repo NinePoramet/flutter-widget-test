@@ -60,9 +60,11 @@ flutter pub get
 flutter run
 ```
 
+```
 👤 Author
 • Poramet Poolsup
 • GitHub: https://github.com/NinePoramet
+```
 
 📌 Notes
 
