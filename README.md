@@ -60,9 +60,13 @@ flutter pub get
 flutter run
 ```
 
-![Scroll List](assets/screenshot1.png)
-![Bottom Sheet](assets/screenshot2.png)
-![Highlight after pop](assets/screenshot3.png)
+## 📸 Screenshots
+
+<img src="assets/screenshot1.png" alt="Scroll List" width="400"/>
+<br/>
+<img src="assets/screenshot2.png" alt="Bottom Sheet" width="400"/>
+<br/>
+<img src="assets/screenshot3.png" alt="Highlight after pop" width="400"/>
 
 👤 Author \
 • Poramet Poolsup \
