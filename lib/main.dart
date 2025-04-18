@@ -33,6 +33,7 @@ class _FibonacciListScreenState extends State<FibonacciListScreen> {
   final buttomSheetScrollController = ScrollController();
 
   void _onNumberTap(int removeIndex, FinonacciNumber tappedNumber) {
+    // 3. Tap Functionality
     setState(() {
       highlightedIndex = null;
     });
@@ -41,7 +42,7 @@ class _FibonacciListScreenState extends State<FibonacciListScreen> {
     removedNumbers.sort((a, b) => a.index.compareTo(b.index));
 
     int tappedType = tappedNumber.type;
-
+    // 3.1 Display a BottomSheet containing a list of items, filtered to show only items with the same type as the tapped Fibonacci number.
     List<FinonacciNumber> filteredRemoved =
         removedNumbers.where((element) => element.type == tappedType).toList();
 
@@ -70,16 +71,20 @@ class _FibonacciListScreenState extends State<FibonacciListScreen> {
         itemBuilder: (context, index) {
           final item = filteredRemoved[index];
           return InkWell(
+            // 3.2 Each item in the BottomSheet should be tappable
             onTap: () {
+              // 3.3 When tapping an item
               setState(() {
+                // 3.3.1 Remove the item from the BottomSheet and add it back to the main list
                 removedNumbers.remove(item);
                 fibonaccis.fiboNumbers.insert(item.index, item);
+                // 3.3.3 Highlight the item that was just added back in the main list
                 highlightedIndex = item.index;
               });
-
+              // 3.3.2 Close the BottomSheet
               Navigator.pop(context);
 
-              // Scroll and highlight after short delay
+              // 3.3.4 Scroll to the Highlight item
               Future.delayed(Duration(milliseconds: 300), () {
                 scrollController.animateTo(
                   item.index * tileHeight,
@@ -133,6 +138,7 @@ class _FibonacciListScreenState extends State<FibonacciListScreen> {
           style: TextStyle(fontWeight: FontWeight.w500, fontSize: 20),
         ),
         const SizedBox(height: 10),
+        // 1. Scrollable Widget
         Expanded(
           child: ListView.builder(
             controller: scrollController,
@@ -152,6 +158,7 @@ class _FibonacciListScreenState extends State<FibonacciListScreen> {
                   color: isHighlighted ? Colors.red[200] : Colors.white,
                   height: tileHeight,
                   child: Row(
+                    // 2. Display Widget
                     children: [
                       const SizedBox(width: 10),
                       SizedBox(
